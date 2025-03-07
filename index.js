@@ -1,23 +1,30 @@
 // Complete the Numbers class below
 // the constructor has already been provided
+    //data can either be a string or an array of numbers
+
 class Numbers {
   constructor(data) {
-    //data can either be a string or an array of numbers
     if (typeof data === "string") {
-      this.data = str.split(",").map((number) => number * 1);
+      this.data = data.split(",").map((number) => Number(number));
     } else {
       this.data = data;
     }
   }
-  count() {
+  count(){
     //return the count of numbers in data
+    return this.data.length;
   }
+
   printNumbers() {
     //print the numbers in data
+    this.data.forEach((num)=> console.log(num));
   }
+
   odds() {
     //return the odd numbers in data
+    return this.data.getOddNumbers;
   }
+
   evens() {
     //return the even numbers in data
   }
